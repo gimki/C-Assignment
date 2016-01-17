@@ -1,0 +1,35 @@
+#include<iostream>
+#include "substring.h"
+#include<cstring>
+
+using namespace std;
+
+// is_prefix has 2 argument and check if the first argument is the prefix of the second.
+bool is_prefix(char first_string[],char second_string[]){
+
+  int first_length=strlen(first_string);
+  int second_length=strlen(second_string);
+
+  if(first_length>second_length){
+    return 0;
+  }
+  if(first_length==0){
+    return 1;
+  }
+
+  if(first_string[0]==second_string[0]){
+
+    //char first_string_copy[first_length];
+    //char second_string_copy[second_length];
+    //strcpy(first_string_copy,first_string[1]);
+    //strcpy(second_string_copy,second_string[1]);
+
+    if(is_prefix(first_string[1],second_string[1])){
+      return 1;
+    }else{
+      return 0;
+    }
+    
+  }
+  
+}

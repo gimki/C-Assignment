@@ -1,0 +1,11 @@
+#ifndef PIGLATIN_H
+#define PIGLATIN_H
+
+int findFirstVowel(char* word);
+bool isVowel(char ch, int position, int length);
+
+
+
+
+
+#endif
