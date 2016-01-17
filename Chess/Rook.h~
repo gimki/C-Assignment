@@ -1,0 +1,28 @@
+//
+//  Rook.h
+//  
+//
+//  Created by Colman Yau on 01/12/2015.
+//
+//
+
+#ifndef Rook_h
+#define Rook_h
+
+#include <map>
+#include <string>
+#include "ChessPiece.h"
+
+class Rook: public ChessPiece{
+    
+public:
+    Rook(bool _white);
+    virtual ~Rook();
+    virtual bool validmove(string s_sq, string d_sq, map<string,ChessPiece*>* chessboard);
+    virtual string name();
+    
+    
+    
+    
+};
+#endif /* Rook_h */

@@ -1,0 +1,50 @@
+//
+//  ChessPiece.h
+//  
+//
+//  Created by Colman Yau on 01/12/2015.
+//
+//
+
+#ifndef ChessPiece_h
+#define ChessPiece_h
+
+
+#include <map>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+class ChessPiece{
+    
+protected:
+    bool _whiteside;
+    bool _king;
+    
+    //clashWithFriendly will only check whether the d_sq is enermy or not
+    //will not check whether d_sq is valid or d_sq is empty
+    bool clashWithFriendly(string d_sq, map<string, ChessPiece*>* chessboard1);
+    bool vObstruction(string s_sq, string d_sq, map<string, ChessPiece*>* chessboard1);
+    bool hObstruction(string s_sq, string d_sq, map<string, ChessPiece*>* chessboard1);
+    bool diagonalObstruction(string s_sq, string d_sq, map<string, ChessPiece*>* chessboard1);
+    bool sameColumn(string sourPos, string destPos);
+    bool sameRow(string sourPos, string destPos);
+    bool sameDiagonal(string sourPos, string destPos);
+    
+public:
+    ChessPiece(bool _white);
+    virtual ~ChessPiece();
+    bool iswhite();
+    bool isking();
+    bool isenermy(ChessPiece* cp);
+    virtual bool validmove(string s_sq, string d_sq, map<string, ChessPiece*>* chessboard1) = 0;
+    
+    virtual string name();
+    
+    
+    
+};
+
+
+#endif /* ChessPiece_h */

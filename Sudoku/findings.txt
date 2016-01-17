@@ -1,0 +1,37 @@
+Summarise your findings here (see specification).
+
+Mystery2: (unsolved)
+After running solve_board, we have got the message that no solution can be found. It means after trying all possible combination, no combination satisfied in this sudoku and therefore, we can deduce it is the one which has no solution.
+
+=============================================================================================================================================
+
+For distinguishing the difficulties of Mystery1 and Mystery2, I have taken the following factors into account:
+Number of trials we have used to solve the sudoku;
+Number of given digits at the start of a sudoku;
+Distribution of the given digits at the start of sudoku.
+
+
+1. 	I have modified the program solve_board and produced the program solve_board_1_9 which also gives out the number of trials used for solving the particular sudoku. 
+	By running the program, we can see that more trials were used for solving Mystery1 than for solving Mystery3. 
+	However, opposite result was obtained if we make our guess starting from 9 to 1. 
+	The contradiction arises between two scenarios shows that monitoring the number of trials is not sufficient to determine which of the two mysterious is harder.
+	On the other hand, the number of trials can be easily affected by the way we made our guessings when we run the program. 
+	Therefore, it is not a fair quantity to judge which one of the two is more difficult.
+
+2. 	By observation, there are 
+	23 digits given in Mystery1
+	24 digits given in Mystery3
+	25 digits given in Medium
+	26 digits given in Easy 
+	According to the pattern, we can deduce that Mystery1 is the most difficult board by its number of given digits.  
+	
+3.	By comparing the distribution of the starting board, Mystery1 has a more scattering distribution comparing with Mystery3. 
+	By only employing the basic sudoku solving technique (solve by comparing the digits within the row, column and subgrid), I am stuck after filling 10 entries for Mystery1 and 11 entries for Mystery3. 
+	Guess or further sudoku solving technique are needed afterwards for the remaining  48 entries for Mystery1 and 46 entries for Mystery3. 
+
+
+In conclusion, I believe Mystery1 is the extremely hard sudoku while Mystery2 is the hard sudoku.
+
+
+
+

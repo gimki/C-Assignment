@@ -1,0 +1,29 @@
+//
+//  Bishop.h
+//  
+//
+//  Created by Colman Yau on 01/12/2015.
+//
+//
+
+#ifndef Bishop_h
+#define Bishop_h
+
+#include <map>
+#include <cstring>
+#include "ChessPiece.h"
+
+using namespace std;
+class Bishop: public ChessPiece{
+    
+public:
+    Bishop(bool _white);
+    virtual ~Bishop();
+    virtual bool validmove(string s_sq, string d_sq, map<string,ChessPiece*>* chessboard1);
+    virtual string name();
+    
+    
+    
+    
+};
+#endif /* Bishop_h */
